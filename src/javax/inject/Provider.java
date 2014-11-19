@@ -20,11 +20,12 @@ package javax.inject;
  * Provides instances of {@code T}. Typically implemented by an injector. For
  * any type {@code T} that can be injected, you can also inject
  * {@code Provider<T>}. Compared to injecting {@code T} directly, injecting
- * {@code Provider<T>} enables:
+ * {@code Provider<T>} may, if the injector supports the feature and is configured
+ * appropriately:
  *
  * <ul>
  *   <li>retrieving multiple instances.</li>
- *   <li>lazy or optional retrieval of an instance.</li>
+ *   <li>deferred retrieval of an instance.</li>
  *   <li>breaking circular dependencies.</li>
  *   <li>abstracting scope so you can look up an instance in a smaller scope
  *      from an instance in a containing scope.</li>
